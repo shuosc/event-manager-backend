@@ -3,6 +3,8 @@ chardet==3.0.4
 falcon==1.4.1
 hug==2.4.8
 idna==2.8
+pony==0.7.10
+PyMySQL==0.9.3
 python-mimeparse==1.6.0
 requests==2.21.0
 six==1.12.0
