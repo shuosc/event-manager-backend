@@ -7,6 +7,9 @@ db.bind(provider='mysql', host='localhost', user='jackjack59', passwd='jackjack1
 class Event(db.Entity):
     id = PrimaryKey(int, auto=True)
     eventName = Required(str)
+    lecturer = Required(str)
+    eventTime = Optional(str)
+    eventPlace = Optional(str)
     createTime = Required(datetime, sql_default='CURRENT_TIMESTAMP')
 
 
