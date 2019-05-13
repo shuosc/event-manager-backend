@@ -21,3 +21,11 @@ def getEvent():
         for event in events:
             result.append({'eventName': event.eventName, 'lecturer': event.lecturer, 'eventTime': event.eventTime, 'eventPlace':event.eventPlace})
         return result
+@hug.get("/event/{id}")
+def getEventDetail(id: hug.types.number):
+    with db_session:
+        eventDetail = select(c for c in Event if c.id == id)
+        result = []
+        for event in eventDetail:
+            result.append({'eventName': event.eventName, 'lecturer': event.lecturer, 'eventTime': event.eventTime, 'eventPlace':event.eventPlace})
+        return result
